@@ -21,9 +21,9 @@
   */
 
 (function() {
-  var btn = document.getElementById('button');
-  var aqi_ipt = document.getElementById('aqi-input');
-  var aqi_dsply = document.getElementById('aqi-display');
+  let btn = document.getElementById('button');
+  let aqi_ipt = document.getElementById('aqi-input');
+  let aqi_dsply = document.getElementById('aqi-display');
   btn.addEventListener('click', ()=> {
     aqi_dsply.innerHTML = aqi_ipt.value;
   })
