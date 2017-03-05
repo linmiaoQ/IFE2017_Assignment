@@ -34,20 +34,19 @@
   将空气质量指数大于60的城市显示到aqi-list的列表中
   */
 
- let aqiIndex = ['一', '二', '三', '四', '五', '六']
 
  let aqiSorted = aqiData.sort(function(a,b) {
    return b[1] - a[1];
  });
 
+ let aqiIndex = ['一', '二', '三', '四', '五', '六']
+
  let aqiList = document.getElementById('aqi-list');
 
  for (i in aqiSorted) {
-
    if (aqiSorted[i][1] >60 ){
    aqiList.innerHTML += `<li>第${aqiIndex[i]}名：${aqiSorted[i]}</li>`;
    }
-
  }
 
 })();
