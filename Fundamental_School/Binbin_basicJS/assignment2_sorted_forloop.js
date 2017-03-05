@@ -24,7 +24,7 @@
   ["西安", 100]
 ];
 
- var aqiSorted = aqiData.sort(function(a,b) {
+ let aqiSorted = aqiData.sort(function(a,b) {
    return a[1] < b [1] ? 1 : -1
  });
 
