@@ -40,7 +40,8 @@ function getData() {
       data.push([aqiCityName, aqiNumber]);
     }
 
-  //成对数据放array里，记得在每一对的外头加[]
+  // 成对数据放array里，记得在每一对的外头加[]
+
   /*
   coding here
   */
@@ -54,6 +55,7 @@ function getData() {
   */
 
   return data;
+  // 如果下一个函数还需要用到data, 这里要返回data
 
 }
 
@@ -68,7 +70,10 @@ function sortAqiData(data) {
    return a[1] - b[1];
   });
   return data;
-  // a[1] - b[1] 弄清楚 a[1] - b[1] 什么意思
+  /** To compare numbers instead of strings,
+  * the compare function can simply subtract b from a.
+  * The following function will sort the array ascending (if it doesn't contain Infinity and NaN):
+  */
 }
 
 function render(data) {
@@ -77,6 +82,7 @@ let chnRank = ["一","二","三","四","五","六","七"];
 for (i in data) {
   aqiRender.innerHTML += `<li>第${chnRank[i]}名${data[i][0]}空气质量:<b>${data[i][1]}</b></li>`
 }
+// 这里不返回aqiRender了，是因为aqiRender这步已经完成渲染了，不需要再把它的数据往下传递给其他函数
 }
 
 var buttonSorted = document.getElementById('sort-btn');
