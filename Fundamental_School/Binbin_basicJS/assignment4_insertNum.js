@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -18,7 +17,7 @@
   font-size: 21px;
   text-align: center;
   margin: 10px;
-  padding: 5px 10px 5px 10px;
+  padding: 5px 12px 5px 12px;
   border-radius: 10%;
 }
   </style>
@@ -72,14 +71,14 @@
     });
 
     rightOut.addEventListener("click", function(){
+			alert(`${a[a.length-1]}`);
       presentNum.removeChild(presentNum.lastChild);
     });
 
      leftOut.addEventListener("click", function(){
-
-      presentNum.removeChild(presentNum.firstChild);
-
-    });
+			alert(`${a[0]}`);
+  	presentNum.removeChild(presentNum.firstChild);
+  });
 
       presentNum.addEventListener("click", function(event){
         presentNum.removeChild(event.target);
